@@ -10,26 +10,25 @@
 
     <h1>Create a Web Form Mini Project</h1>
 
-    <form id="myForm" action="" method="GET">
+    <form id="myForm">
                 <span style="text-decoration: underline">Name:</span>
                 <input type="text" id="nameBox" value="" />
                 
         <br /><br />
 
-            <div id="fruitButton"><span style="text-decoration: underline">Pick a Fruit:</span>
-                Pineapple:<input type="radio" name="rad" value="Pineapple" /> 
-                Peach:<input type="radio" name="rad" value="Peach"/>
-                Pear:<input type="radio" name="rad" value="Pear" />
+            <div id="fruitRadio"><span style="text-decoration: underline">Pick a Fruit:</span>
+                Pineapple:<input type="radio" name="rad" value="pineapple" /> 
+                Peach:<input type="radio" name="rad" value="peach"/>
+                Pear:<input type="radio" name="rad" value="pear" />
             </div>
                 
         <br /><br />
 
-            <span style="text-decoration: underline">Pick a Prime Color:</span>
-                <select id="color">
-                  <option value="red">Red</option>
-                  <option value="blue">Blue</option>
-                  <option value="yellow">Yellow</option>
-                </select>
+            <div id="colorCheck"><span style="text-decoration: underline">Pick a Prime Color:</span>   
+                  Red: <input type="checkbox" value="red"/>
+                  Blue: <input type="checkbox" value="blue"/>
+                  Yellow: <input type="checkbox" value="yellow"/>
+             </div>  
 
         <br /><br />
 
@@ -39,24 +38,30 @@
 
     <script>
             function name_alert(){
-                
+        
                 var nameBoxText = document.getElementById('nameBox').innerHTML;
-
+              
                     if (nameBoxText == 'Hello'){
                         alert ('Hey There!')
                     }
-                    if (nameBoxText == ""){
+                    if (nameBoxText == ''){
                         alert ('Name is required.')
                     }
-                    else {
+                    else if (nameBoxText !== 'Hello' && nameBoxText !== ''){
                         alert ('Thank You!')
                     }
-                
-                var fruit = document.getElementById('fruitButton').innerHTML;
-                var color = document.getElementById('color').innerHTML;
-                console.log(nameBoxText);
-                console.log(fruit);
-                console.log(color);
+                    console.log(nameBoxText);
+           
+
+                var fruits = ['pineapple', 'peach', 'pear'];
+                for (var i in fruits){
+                    console.log(fruits[i]).checked;
+                }
+
+                var colors = ['red', 'blue', 'yellow'];
+                for (var j in colors){
+                    console.log(colors[j]).checked;
+                }
             }
     </script>
     

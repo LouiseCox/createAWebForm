@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+   <meta charset="UTF-8">
+
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+   <title>createAWebForm</title>
+
+</head>
+
+<body>    <h1>Create a Web Form Mini Project</h1>    <form id="myForm">
+
+               <span style="text-decoration: underline">Name:</span>
+
+               <input type="text" id="nameBox" value="" />        <br /><br />            
+               
+               <div><span style="text-decoration: underline">Pick a Fruit:</span>
+                
+                <form>
+                    Pineapple:<input type="radio" id="fruitButton" name="rad" value="Pineapple" />
+
+                    Peach:<input type="radio" id="fruitButton" name="rad" value="Peach"/>
+
+                    Pear:<input type="radio" id="fruitButton" name="rad" value="Pear" />
+                </form>
+                </div>        
+                <br /><br />            
+               
+                <span style="text-decoration: underline">Pick a Prime Color:</span>
+
+                <select id="color">
+
+                 <option value="red">Red</option>
+
+                 <option value="blue">Blue</option>
+
+                 <option value="yellow">Yellow</option>
+
+               </select>        <br /><br />                
+               
+               <input type="submit" value="Submit" onclick="name_alert()"/>    
+               
+               </form>    <script>
+
+           function name_alert(){                
+               var nameBoxText = document.getElementById('nameBox').value;
+
+               console.log(nameBoxText);
+
+                   if (nameBoxText == 'Hello'){
+
+                       alert ('Hey There!')
+
+                   }
+
+                   if (nameBoxText == ''){
+
+                       alert ('Name is required.')
+
+                   }
+
+                   else {
+
+                       alert ('Thank You!')
+
+                   }                
+                
+                var fruit = document.getElementById('fruitButton').value;
+
+                var color = document.getElementById('color').value;                
+                console.log(fruit);
+                console.log(color);
+
+           }
+
+   </script></body>
+
+</html>
