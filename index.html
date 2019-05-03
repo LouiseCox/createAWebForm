@@ -25,9 +25,9 @@
         <br /><br />
 
             <div id="colorCheck"><span style="text-decoration: underline">Pick a Prime Color:</span>   
-                  Red: <input type="checkbox" value="red"/>
-                  Blue: <input type="checkbox" value="blue"/>
-                  Yellow: <input type="checkbox" value="yellow"/>
+                  Red: <input type="checkbox" name="col" value="red"/>
+                  Blue: <input type="checkbox" name="col" value="blue"/>
+                  Yellow: <input type="checkbox" name="col" value="yellow"/>
              </div>  
 
         <br /><br />
@@ -39,28 +39,47 @@
     <script>
             function name_alert(){
         
-                var nameBoxText = document.getElementById('nameBox').innerHTML;
+                var nameBoxText = document.getElementById('nameBox').value;
+                console.log(nameBoxText);
               
                     if (nameBoxText == 'Hello'){
-                        alert ('Hey There!')
+                        alert ('Hey There!');   
                     }
                     if (nameBoxText == ''){
-                        alert ('Name is required.')
+                        alert ('Name is required.');
                     }
                     else if (nameBoxText !== 'Hello' && nameBoxText !== ''){
-                        alert ('Thank You!')
+                        alert ('Thank You!');
                     }
-                    console.log(nameBoxText);
+                   
            
 
-                var fruits = ['pineapple', 'peach', 'pear'];
+                /*var fruits = ['pineapple', 'peach', 'pear'];
+            debugger;
                 for (var i in fruits){
-                    console.log(fruits[i]).checked;
-                }
+                    console.log(fruits[i].checked)
+                    }
 
                 var colors = ['red', 'blue', 'yellow'];
                 for (var j in colors){
-                    console.log(colors[j]).checked;
+                    var color = colors[j].checked;
+                    console.log(color);
+                }
+
+                var fruits = document.getElementsByName("rad"); 
+            debugger;
+                for(var i = 0; i < fruits.length; i++){  
+                    if(fruits[i].checked); {
+                     console.log([i]); 
+                    }   
+                }*/  
+
+                var fruits = ['pineapple', 'peach', 'pear'];
+                debugger;
+                for(var i = 0; i < fruits.length; i++){  
+                   // if(fruits[i].checked); {
+                     console.log(fruits[i].checked); 
+                   // }   
                 }
             }
     </script>
